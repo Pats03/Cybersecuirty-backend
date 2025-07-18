@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser()); // Ensure cookie parsing
 const corsOptions = {
-  origin: 'http://localhost:3000', // Allow frontend URL
+  origin: 'https://cyberquestions-9z9n.vercel.app', // Allow frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'], // Allow necessary headers
   credentials: true, // Important: Allow cookies and Authorization headers
@@ -46,5 +46,3 @@ app.use('/api/v1/auth', authRoute);
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
-
-
