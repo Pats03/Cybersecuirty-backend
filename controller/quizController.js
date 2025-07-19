@@ -217,6 +217,7 @@ const updateScore = async (req, res) => {
     });
   } catch (error) {
     res.status(500).json({ message: 'Server error', error: error.message });
+    console.log(error);
   }
 };
 
@@ -254,7 +255,6 @@ const getScoresByJobRole = async (req, res) => {
   }
 };
 
-
 const deleteQuiz = async (req, res) => {
   try {
     const { id } = req.params;
@@ -270,10 +270,6 @@ const deleteQuiz = async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 };
-
-
-
-
 
 // Correct export statement
 module.exports = {
