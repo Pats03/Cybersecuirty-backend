@@ -22,7 +22,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 // MongoDB connection
 mongoose
-  .connect(process.env.MONGO_URI, {
+  .connect('mongodb+srv://teja03:ras143@cluster0.dknihtb.mongodb.net/Cybersage?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
